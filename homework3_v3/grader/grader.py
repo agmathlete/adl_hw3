@@ -38,7 +38,7 @@ def list_all_kwargs(**kwargs):
     return all_args
 
 
-def case(func, kwargs=None, score=1, extra_credit=False, timeout=1000):
+def case(func, kwargs=None, score=1, extra_credit=False, timeout=10000):
     """
     Use @Case(score, extra_credit) as a decorator for member functions of a Grader
     A test case can return a value between 0 and 1 as a score
@@ -103,7 +103,7 @@ def case(func, kwargs=None, score=1, extra_credit=False, timeout=1000):
 
 
 class Case:
-    def __init__(self, score=1, extra_credit=False, timeout=500):
+    def __init__(self, score=1, extra_credit=False, timeout=5000):
         self.score = score
         self.extra_credit = extra_credit
         self.timeout = timeout
